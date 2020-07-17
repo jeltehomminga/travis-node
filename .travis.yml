@@ -19,6 +19,6 @@ script:
   - docker tag travis-node jeltehomminga/travis-node:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push jeltehomminga/travis-node
 #deploy:
